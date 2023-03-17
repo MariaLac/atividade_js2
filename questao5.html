@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade J.S. -> Parte 2</title>
+
+    <style>
+        body{
+            background-color: rgb(208, 103, 121);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color: rgb(245, 238, 180);
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            border-radius:  15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            width: 50%;
+            background-color: slategrey;
+            color:white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+    <h1>ATIVIDADE JAVA SCRIPT #5</h1>
+    <h2>Maria Clara Andrade de Lacerda</h2>
+    <h3>4TI</h3>
+    </div>
+    <div class="box">
+        <p>Questão 5: Entrar com nome, sexo e idade de uma pessoa. Se a pessoa for do sexo feminino e
+            tiver menos que 25 anos, imprimir nome e a mensagem: ACEITA. Caso contrário,
+            imprimir nome e a mensagem: NÃO ACEITA. (Considerar f ou F.)
+            </p>
+        <input type="text" id="nome" placeholder="Digite o Nome">
+        <br><br>
+        <input type="text" id="sexo" placeholder="Digite o sexo (escreva f/F ou m/M)">
+        <br><br>
+        <input type="number" id="idade" placeholder="Digite a idade">
+        <br><br>
+        <button onclick="pessoa()">Enviar</button>
+    </div>
+</body>
+<script>
+
+    function pessoa()
+    {
+        var nome = document.querySelector('#nome').value;
+        var sexo = document.querySelector('#sexo').value;
+        var idade = document.querySelector('#idade').value;
+
+        if(sexo === 'F' || 'f' && idade <= 25) {
+            console.log('Nome: ' +nome +" , ACEITA");
+        } else {
+            console.log('Nome: ' +nome +" , NÃO ACEITA");
+        }
+    }
+</script>
+</html>

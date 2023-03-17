@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade J.S. -> Parte 2</title>
+
+    <style>
+        body{
+            background-color: rgb(208, 103, 121);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color: rgb(245, 238, 180);
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            border-radius:  15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            width: 50%;
+            background-color: slategrey;
+            color:white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+    <h1>ATIVIDADE JAVA SCRIPT #6</h1>
+    <h2>Maria Clara Andrade de Lacerda</h2>
+    <h3>4TI</h3>
+    </div>
+    <div class="box">
+        <p>Questão 6: Entrar com nome, nota da AV1 e nota da AV2 de um aluno. Imprimir nome, nota
+            da AV1, nota da AV2 , média e uma das mensagens: Aprovado, Reprovado ou em
+            Prova Final (a média é 7 para aprovação, menor que 3 para reprovação e as de-
+            mais em prova final).
+            </p>
+        <input type="text" id="nome" placeholder="Digite o Nome">
+        <br><br>
+        <input type="number" id="n1" placeholder="Digite a nota da avaliação 1">
+        <br><br>
+        <input type="number" id="n2" placeholder="Digite nota da avaliação 2">
+        <br><br>
+        <button onclick="aluno()">Enviar</button>
+    </div>
+</body>
+<script>
+
+    function aluno()
+    {
+        var nome = document.querySelector('#nome').value;
+        var nota1 = document.querySelector('#n1').value;
+        var nota2 = document.querySelector('#n2').value;
+
+        function soma(n1, n2){
+            n1 = +n1;
+            n2 = +n2;
+            return n1 + n2;
+        }
+
+        var media = soma(nota1, nota2)/2;
+
+        if(media>=7){
+            console.log("Nome: " +nome +" , Avaliação 1: " +nota1 +", Avaliação 2: " +nota2 +", Média: " +media +", APROVADO!");
+        } else if(media<3){
+            console.log("Nome: " +nome +" , Avaliação 1: " +nota1 +", Avaliação 2: " +nota2 +", Média: " +media +", REPROVADO!");
+        } else{
+            console.log("Nome: " +nome +" , Avaliação 1: " +nota1 +", Avaliação 2: " +nota2 +", Média: " +media +", PROVA FINAL!");
+        }
+    }
+</script>
+</html>

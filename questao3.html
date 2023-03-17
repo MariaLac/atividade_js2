@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade J.S. -> Parte 2</title>
+
+    <style>
+        body{
+            background-color: rgb(208, 103, 121);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color: rgb(245, 238, 180);
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            border-radius:  15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            width: 50%;
+            background-color: slategrey;
+            color:white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+    <h1>ATIVIDADE JAVA SCRIPT #3</h1>
+    <h2>Maria Clara Andrade de Lacerda</h2>
+    <h3>4TI</h3>
+    </div>
+    <div class="box">
+        <p>Questão 3:  Construir um algoritmo que leia dois números e efetue a adição. Caso o valor so-
+            mado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8;
+            caso o valor somado seja menor ou igual a 20, este deverá ser apresentado sub-
+            traindo-se 5</p>
+        <input type="number" id="valor1" placeholder="Digite o número 1 ">
+        <br><br>
+        <input type="number" id="valor2" placeholder="Digite o número 2">
+        <br><br>
+        <button onclick="numero()">Enviar</button>
+    </div>
+</body>
+<script>
+
+    function numero()
+    {
+        var num1 = document.querySelector('#valor1').value;
+        var num2 = document.querySelector('#valor2').value;
+
+        function soma(n1, n2){
+            n1 = +n1;
+            n2 = +n2;
+            return n1 + n2;
+        }
+
+        var adicao = soma(num1, num2);
+
+      if(adicao > 20){
+        console.log('O novo número é: ' +(adicao + 8));
+      } else {
+        console.log('O novo número é: '+(adicao - 5));
+      }
+    }
+</script>
+</html>

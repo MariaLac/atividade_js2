@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade J.S. -> Parte 2</title>
+
+    <style>
+        body{
+            background-color: rgb(208, 103, 121);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color: rgb(245, 238, 180);
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            border-radius:  15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            width: 50%;
+            background-color: slategrey;
+            color:white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-nav">
+    <h1>ATIVIDADE JAVA SCRIPT #2</h1>
+    <h2>Maria Clara Andrade de Lacerda</h2>
+    <h3>4TI</h3>
+    </div>
+    <div class="box">
+        <p>Questão 2:  Ler um número e imprimir se ele é positivo, negativo ou nulo</p>
+        <input type="number" id="valor" placeholder="Digite o número">
+        <br><br>
+        <button onclick="numero()">Enviar</button>
+    </div>
+</body>
+<script>
+
+    function numero()
+    {
+        var num = document.querySelector('#valor').value;
+        
+      if(num == 0){
+        console.log('O número ' + num + ' é nulo');
+      } else if(num < 0){
+        console.log('O número ' + num + ' é negativo');
+      } else{
+        console.log('O número ' + num + ' é positivo');
+      }
+    }
+</script>
+</html>
